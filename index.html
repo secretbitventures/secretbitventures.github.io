@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>SBV website</title>
-</head>
-<body>
-    <h1>SBV, coming soon!</h1>
-    <p>Welcome to SecretBit Ventures website.</p>
-</body>
-</html>
+---
+title:
+call_to_action: Contact
+background_image_path:
+large_header: true
+testimonials:
+  - message: Working with the SBV team has transformed our approach to data privacy. Their innovative solutions have given us a competitive edge in the market.
+    image: "https://placebear.com/60/60?a=.png"
+    name: Harshad Chandak, CEO at Saharsh Prefab
+  - message: SecretBit Ventures has been instrumental in helping us implement cutting-edge privacy-preserving machine learning solutions. Their expertise in applied cryptography is unmatched.
+    image: "https://placebear.com/60/60?a=.png"
+    name: Aditya Kela, CEO at Banana Box
+  - message: The research and implementation capabilities at SecretBit Ventures are exceptional. They delivered complex privacy-enhancing technologies that exceeded our expectations.
+    image: "https://placebear.com/60/60?a=.png"
+    name: Radha Bangaru, CEO at Radha Ki Rasoi
+_options:
+  image:
+    width: 60
+    height: 60
+---
+
+<div class="editable">
+	<p><strong>SecretBit Ventures (SBV)</strong> is an independent research firm at the forefront of privacy-enhancing technologies and applied cryptography. Founded by Dr. Sameer Wagh, we specialize in developing cutting-edge solutions that bridge the gap between theoretical research and practical implementation.</p>
+
+	<p>Our expertise spans multi-party computation, homomorphic encryption, federated learning, differential privacy, and machine learning. We work with organizations worldwide to implement secure, privacy-preserving systems that protect sensitive data while enabling powerful analytics and AI capabilities.</p>
+</div>
+
+<div class="testimonials">
+	{% for testimonial in page.testimonials %}
+		<blockquote class="testimonial">
+			<p class="testimonial-message">{{ testimonial.message }}</p>
+			<p class="testimonial-author"><img src="{% include relative-src.html src=testimonial.image %}" alt="Photo of {{ testimonial.name }}"> {{ testimonial.name }}</p>
+		</blockquote>
+	{% endfor %}
+</div>

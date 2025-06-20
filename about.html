@@ -1,0 +1,39 @@
+---
+title: About
+call_to_action: Contact
+background_image_path:
+large_header: false
+show_in_navigation: true
+navigation_order: 1
+---
+
+<div class="editable">
+	<p>
+		SecretBit Ventures (SBV) is an independent research firm with over a decade of experience in academia and industry. Our team brings together expertise in multi-party computation, homomorphic encryption, federated learning, differential privacy, and machine learning. We have worked with top research institutions and technology companies worldwide, developing solutions that protect sensitive data while enabling powerful analytics and AI capabilities.</p>
+
+	<p>Meet the core members of our team:</p>
+</div>
+
+<p class="editor-link"><a href="cloudcannon:collections/_staff_members" class="btn"><strong>&#9998;</strong> Update Staff Members</a></p>
+
+<ul class="staff-list">
+	{% for member in site.staff_members %}
+		<li class="staff">
+			<div class="staff-details">
+				<div class="staff-image">
+					<img src="{{ member.image }}" alt="Staff photo for {{ member.name }}" width="120" height="120">
+				</div>
+				<ul class="staff-info">
+					<li>{{ member.name }}</li>
+					<li><small>{{ member.credentials }}</small></li>
+					<li><a href="mailto:{{ site.data.company.contact_email_address }}">{{ site.data.company.contact_email_address }}</a></li>
+					<!-- <li><a href="tel:{{ site.data.company.phone }}">{{ site.data.company.phone }}</a>  ext {{ member.phone_extension }}</li> -->
+				</ul>
+			</div>
+
+			<div class="staff-bio">
+				<p>{{ member.content | markdownify }}</p>
+			</div>
+		</li>
+	{% endfor %}
+</ul>

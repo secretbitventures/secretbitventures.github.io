@@ -1,0 +1,28 @@
+- title: Pages
+  links:
+    - name: Home
+      link: /
+    - name: About
+      link: /about/
+    - name: Services
+      link: /services/
+    - name: Contact
+      link: /contact/
+- title: Social
+  links:
+    - name: GitHub
+      link: https://github.com/snwagh
+      social_icon: GitHub
+      new_window: true
+    - name: LinkedIn
+      link: https://www.linkedin.com/pub/sameer-wagh/a7/116/8a6
+      social_icon: LinkedIn
+      new_window: true
+    - name: Google Scholar
+      link: https://scholar.google.com/citations?user=HA3kHUEAAAAJ&hl=en
+      social_icon: Scholar
+      new_window: true
+    - name: Personal Website
+      link: https://snwagh.github.io
+      social_icon: Website
+      new_window: true

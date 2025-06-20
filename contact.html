@@ -1,0 +1,37 @@
+---
+title: Contact
+call_to_action: Contact
+background_image_path:
+large_header: false
+show_in_navigation: true
+navigation_order: 3
+---
+
+<p class="editable">
+	Get in touch with SecretBit Ventures to discuss your technology needs. We offer consultations for organizations looking to architect secure, privacy-first solutions. No obligations and your first consultation is free.
+</p>
+
+<div class="columns">
+	<div class="column">
+		<p class="editor-link"><a href="cloudcannon:collections/_data/company.yml" class="btn"><strong>&#9998;</strong> Update Company Details</a></p>
+
+		<!-- <label>Phone Number</label>
+		<p class="contact-info"><a href="tel:{{ site.data.company.phone }}">{{ site.data.company.phone }}</a></p> -->
+
+		<label>Email Address</label>
+		<p class="contact-info"><a href="mailto:{{ site.data.company.contact_email_address }}">{{ site.data.company.contact_email_address }}</a></p>
+
+		<!-- <label>Location</label>
+		<address class="contact-info">{{ site.data.company.address | replace: ',', '<br>' }}</address> -->
+
+		<label>Location</label>
+		<address class="contact-info">{{ site.data.company.address  }}</address>
+
+		<!-- <label>Research Areas</label>
+		<p class="contact-info">Privacy-Preserving Machine Learning<br>
+		Applied Cryptography<br>
+		Federated Learning<br>
+		Multi-Party Computation<br>
+		Homomorphic Encryption</p> -->
+	</div>
+</div>
