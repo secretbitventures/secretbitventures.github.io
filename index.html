@@ -3,41 +3,139 @@ title:
 call_to_action: Contact
 background_image_path:
 large_header: true
-testimonials:
-  - message: Working with the SBV team has transformed our approach to data privacy. Their innovative solutions have given us a competitive edge in the market.
-    image: "https://placebear.com/60/60?a=.png"
-    name: Harshad Chandak, CEO at Saharsh Cabins
-  - message: SecretBit Ventures has been instrumental in helping us implement cutting-edge privacy-preserving machine learning solutions. Their expertise in applied cryptography is unmatched.
-    image: "https://placebear.com/60/60?a=.png"
-    name: Aditya Kela, CEO at Banana Box
-  - message: The research and implementation capabilities at SecretBit Ventures are exceptional. They delivered complex privacy-enhancing technologies that exceeded our expectations.
-    image: "https://placebear.com/60/60?a=.png"
-    name: Radha Bangaru, CEO at Radha Ki Rasoi
-_options:
-  image:
-    width: 60
-    height: 60
 ---
 
 <div class="editable">
-	<p><strong>SecretBit Ventures (SBV)</strong> is an independent consulting firm specializing in privacy-by-design systems and advanced cryptographic technologies. We partner with leading universities, government agencies, emerging tech organizations, and enterprise clients to solve complex privacy challenges through innovative technical solutions.</p>
+	<p><strong>SecretBit Ventures</strong> builds trustworthy AI systems grounded in mathematics, cryptography, and privacy. Founded by <a href="{{ site.baseurl }}/about/">Dr. Sameer Wagh</a>, we work at the intersection of agentic AI, secure computation, and privacy-enhancing technologies &mdash; turning cutting-edge research into production systems.</p>
 
-	<p>Our approach combines deep analytical expertise with practical implementation, delivering privacy-preserving AI systems that enable secure data collaboration, compliant machine learning development, and robust protection of sensitive information. From startup advisory to executive strategy, we make complex privacy technologies and AI solutions accessible and actionable for diverse organizational needs.</p>
+	<div class="credentials-bar">
+		<span class="credential">IMO Silver Medalist</span>
+		<span class="credential">Princeton PhD</span>
+		<span class="credential">3&times; Microsoft Research</span>
+		<span class="credential">2000+ Citations</span>
+	</div>
 
-	<h3>Key Expertise Areas</h3>
+	<h3>What We Do</h3>
 	<ul>
-		<li><strong>Privacy Technologies:</strong> Homomorphic encryption, multi-party computation, differential privacy, federated learning, and trusted execution environments</li>
-		<li><strong>Strategic Consulting:</strong> Technical architecture review, startup advisory, project oversight, and privacy-by-design system implementation</li>
-		<li><strong>Executive Communication:</strong> Translating complex technical concepts into strategic insights for leadership teams across academic, policy, and technology sectors</li>
-		<li><strong>Applied Research:</strong> Bridging cutting-edge research with real-world applications through rigorous analytical and mathematical problem-solving</li>
+		<li><strong>Private AI &amp; Secure Computation:</strong> Privacy-preserving machine learning, secure multi-party computation, homomorphic encryption, and federated learning &mdash; from protocol design to production deployment</li>
+		<li><strong>Agentic AI Infrastructure:</strong> Secure enclaves for AI evaluation, confidential cross-organization model testing, LLM deployment optimization, and AI-driven code analysis</li>
+		<li><strong>Mathematical Foundations:</strong> Rigorous cryptographic protocol design, novel proof techniques, and formal security guarantees rooted in deep mathematical expertise</li>
 	</ul>
 </div>
 
-<div class="testimonials">
-	{% for testimonial in page.testimonials %}
-		<blockquote class="testimonial">
-			<p class="testimonial-message">{{ testimonial.message }}</p>
-			<p class="testimonial-author"><img src="{% include relative-src.html src=testimonial.image %}" alt="Photo of {{ testimonial.name }}"> {{ testimonial.name }}</p>
-		</blockquote>
-	{% endfor %}
+<div class="projects-section">
+	<h3>Selected Projects</h3>
+	<div class="projects-carousel">
+		<div class="projects-track">
+			<div class="project-card">
+				<h4>Secure Enclaves for AI Evaluation</h4>
+				<p class="project-partner">Anthropic &amp; UK AI Safety Institute</p>
+				<p>Designed and deployed the first pilot of secure enclaves for AI evaluation, enabling confidential cross-organization model testing and setting precedent for industry adoption.</p>
+			</div>
+			<div class="project-card">
+				<h4>Private Network Trace Analysis</h4>
+				<p class="project-partner">University of Virginia</p>
+				<p>Privacy-preserving analysis of sensitive network trace data, enabling secure collaboration on network security research without exposing raw traffic.</p>
+			</div>
+			<div class="project-card">
+				<h4>Efficient MPC via Wavelet Transforms</h4>
+				<p class="project-partner">Nillion Inc.</p>
+				<p>Novel wavelet transform-based protocols for efficient secure multi-party computation, pushing the boundaries of practical MPC performance.</p>
+			</div>
+			<div class="project-card">
+				<h4>Automated AI Code Analysis</h4>
+				<p class="project-partner">Devron Corporation</p>
+				<p>Built an AI system for automated code analysis at a fraction of the cost, cutting monthly LLM endpoint costs by over 90% through architectural and deployment optimizations.</p>
+			</div>
+		</div>
+	</div>
+	<div class="carousel-dots"></div>
 </div>
+
+<script>
+(function() {
+	var track = document.querySelector('.projects-track');
+	var dotsContainer = document.querySelector('.carousel-dots');
+	if (!track || !dotsContainer) return;
+
+	var cards = track.querySelectorAll('.project-card');
+	var totalCards = cards.length;
+	if (totalCards === 0) return;
+
+	// Clone all cards for seamless looping
+	for (var i = 0; i < totalCards; i++) {
+		track.appendChild(cards[i].cloneNode(true));
+	}
+
+	// Build dots
+	for (var i = 0; i < totalCards; i++) {
+		var dot = document.createElement('button');
+		dot.className = 'dot' + (i === 0 ? ' active' : '');
+		dot.setAttribute('aria-label', 'Go to project ' + (i + 1));
+		dot.dataset.index = i;
+		dotsContainer.appendChild(dot);
+	}
+
+	var dots = dotsContainer.querySelectorAll('.dot');
+	var index = 0;
+	var interval = 3500;
+	var paused = false;
+	var gap = 14;
+
+	function getCardWidth() {
+		return track.querySelector('.project-card').offsetWidth;
+	}
+
+	function updateDots() {
+		var active = index % totalCards;
+		for (var i = 0; i < dots.length; i++) {
+			dots[i].className = 'dot' + (i === active ? ' active' : '');
+		}
+	}
+
+	function slideTo(newIndex, animate) {
+		index = newIndex;
+		var offset = index * (getCardWidth() + gap);
+		track.style.transition = animate !== false ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none';
+		track.style.transform = 'translateX(-' + offset + 'px)';
+		updateDots();
+	}
+
+	function advance() {
+		index++;
+		slideTo(index);
+
+		// After reaching cloned set, snap back invisibly
+		if (index >= totalCards) {
+			setTimeout(function() {
+				slideTo(0, false);
+			}, 520);
+		}
+	}
+
+	var timer = setInterval(function() {
+		if (!paused) advance();
+	}, interval);
+
+	// Dot clicks
+	dotsContainer.addEventListener('click', function(e) {
+		if (e.target.classList.contains('dot')) {
+			clearInterval(timer);
+			slideTo(parseInt(e.target.dataset.index));
+			timer = setInterval(function() {
+				if (!paused) advance();
+			}, interval);
+		}
+	});
+
+	// Pause on hover
+	var carousel = document.querySelector('.projects-carousel');
+	carousel.addEventListener('mouseenter', function() { paused = true; });
+	carousel.addEventListener('mouseleave', function() { paused = false; });
+
+	// Recalculate on resize
+	window.addEventListener('resize', function() {
+		slideTo(index % totalCards, false);
+	});
+})();
+</script>

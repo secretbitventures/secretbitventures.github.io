@@ -10,7 +10,7 @@ disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: SecretBit Ventures is an independent research firm specializing in privacy-enhancing technologies, applied cryptography, and machine learning solutions.
+description: SecretBit Ventures builds trustworthy AI systems grounded in mathematics, cryptography, and privacy. We work at the intersection of agentic AI, secure computation, and privacy-enhancing technologies.
 author:
   name: Sameer Wagh
   email: info@secretbitventures.com
