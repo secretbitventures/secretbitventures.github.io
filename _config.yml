@@ -40,5 +40,3 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
-  - Dockerfile
-  - Caddyfile
