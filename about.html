@@ -1,43 +1,73 @@
 ---
+layout: default
 title: About
-call_to_action: Contact
-background_image_path:
-large_header: false
-show_in_navigation: true
-navigation_order: 1
+description: Dr. Sameer Wagh, founder of SecretBit Ventures. Princeton PhD, UC Berkeley postdoc, IMO silver medalist, and researcher in AI, privacy and cryptography.
 ---
+<section class="hero hero-short">
+  <div class="wrap hero-in">
+    <p class="eyebrow">About the founder</p>
+    <h1 class="hero-title">Sameer Wagh</h1>
+    <p class="hero-lede">Sameer founded SecretBit Ventures to work on problems that cross agentic AI, privacy and cryptography, and takes them from research question to running system.</p>
+    {% include logos.html all=true %}
+  </div>
+</section>
 
-<div class="editable">
-	<p>
-		SecretBit Ventures is founded and led by <strong>Dr. Sameer Wagh</strong>, a research scientist and engineer with deep expertise spanning AI, privacy, and mathematics. His career traces a path from a Silver Medal at the 50th International Mathematics Olympiad (India's highest scorer) through a Princeton PhD, postdoctoral research at UC Berkeley, three stints at Microsoft Research (Redmond, Bangalore, Cambridge), and leadership roles building production private AI systems.</p>
+<section class="sand sand-slim">
+  <div class="wrap">
+    <h2 class="vh">In numbers</h2>
+    {% include stats.html %}
+  </div>
+</section>
 
-	<p>
-		Sameer has published 20+ papers in top-tier security and cryptography conferences (PETS, USENIX Security, IEEE S&amp;P) with over 2000 citations. His open-source frameworks &mdash; Falcon, SecureNN, and Piranha &mdash; are deployed in industry and have received the Qualcomm Innovation Fellowship and Facebook Systems for ML research award. He serves on program committees for PETS and ICLR workshops, and reviews for NeurIPS, IEEE S&amp;P, USENIX Security, ACM CCS, and EuroCrypt.</p>
+<div class="wrap records">
+  <div class="bio">
+    <img class="bio-photo" src="{{ '/assets/img/sameer-wagh.webp' | relative_url }}" srcset="{{ '/assets/img/sameer-wagh-600.webp' | relative_url }} 600w, {{ '/assets/img/sameer-wagh.webp' | relative_url }} 960w" sizes="340px" width="960" height="960" alt="Portrait of Sameer Wagh">
+    <div class="prose">
+        <p>Sameer is also a Senior Research Scientist at <a href="https://openmined.org">OpenMined</a> and a Visiting Researcher at the <a href="https://www.virginia.edu">University of Virginia</a>. Before that he led research and development at Devron, turning ideas such as vertical federated learning and AI-driven privacy controls into shipped product.</p>
+        <p>Sameer spent nearly a decade in research: a postdoc at UC Berkeley’s RISE Lab, a PhD at Princeton, three stints at Microsoft Research (Redmond, Bangalore and Cambridge) and a B.Tech. with Honors in Engineering Physics from IIT Madras. The throughline is computing on data without ever seeing it, and making that practical enough to deploy.</p>
+        <p>At OpenMined, his work includes secure enclaves for AI evaluation with Anthropic and the UK AI Safety Institute, double-blind evaluations with Google DeepMind, and secure aggregation across United Nations agencies.</p>
+    </div>
+  </div>
 
-	<p>
-		At OpenMined, he designed the first pilot of secure enclaves for AI evaluation with Anthropic and the UK AI Safety Institute, and implemented secure aggregation across United Nations agencies. At Devron, he led an R&amp;D team delivering privacy-preserving ML infrastructure, vertical federated learning algorithms, and AI-driven code analysis &mdash; cutting LLM costs by over 90%.</p>
+  <section class="record">
+    <h2 class="record-title">Recognition</h2>
+    <ul class="record-list">
+      <li><span class="record-when">2020</span><span>Facebook Systems for ML research award</span></li>
+      <li><span class="record-when">2020</span><span>Finalist, Bede Liu Best Dissertation Award, Princeton</span></li>
+      <li><span class="record-when">2019</span><span>Qualcomm Innovation Fellowship</span></li>
+      <li><span class="record-when">2009</span><span>Silver medal, 50th International Mathematical Olympiad, as India’s highest scorer</span></li>
+    </ul>
+  </section>
+
+  <section class="record">
+    <h2 class="record-title">Selected research</h2>
+    <div>
+      <p class="record-note">More than 20 papers and over 2,500 citations. The open-source frameworks Falcon, SecureNN and Piranha are used in industry. See the <a href="https://www.snwagh.com/publications/">full list</a>.</p>
+      <ul class="record-list">
+        <li><span class="record-when">2026</span><span><a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/piloting-the-worlds-first-double-blind-ai-evaluations/double-blind-evaluations-technical-report.pdf">Double Blind Evals: Resolving the Dual Confidentiality Dilemma in AI Safety Auditing</a><br>Technical report</span></li>
+        <li><span class="record-when">2025</span><span><a href="https://arxiv.org/abs/2511.02055">Private Map–Secure Reduce: Infrastructure for Efficient AI Data Markets</a><br>Technical report</span></li>
+        <li><span class="record-when">2025</span><span><a href="https://eprint.iacr.org/2025/013">Wave Hello to Privacy: Efficient Mixed-Mode MPC using Wavelet Transforms</a><br>PETS</span></li>
+        <li><span class="record-when">2023</span><span><a href="https://eprint.iacr.org/2022/1695.pdf">ELSA: Secure Aggregation for Federated Learning with Malicious Actors</a><br>IEEE Symposium on Security and Privacy</span></li>
+        <li><span class="record-when">2022</span><span><a href="https://eprint.iacr.org/2022/892.pdf">Piranha: A GPU Platform for Secure Computation</a><br>USENIX Security</span></li>
+        <li><span class="record-when">2021</span><span><a href="https://arxiv.org/abs/2004.02229">Falcon: Honest-Majority Maliciously Secure Framework for Private Deep Learning</a><br>PETS</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="record">
+    <h2 class="record-title">Recent writing</h2>
+    <ul class="record-list">
+      <li><span class="record-when">2026</span><span><a href="https://www.snwagh.com/blog/2026/stained-glass-transform/">A novel method for input privacy from LLMs</a></span></li>
+      <li><span class="record-when">2026</span><span><a href="https://www.snwagh.com/blog/2026/open-source-vs-frontier/">Open source vs frontier models</a></span></li>
+      <li><span class="record-when">2025</span><span><a href="https://www.snwagh.com/blog/2025/wave-hello-to-privacy/">Do the math where it’s easy</a></span></li>
+    </ul>
+  </section>
+
+  <section class="record">
+    <h2 class="record-title">Community</h2>
+    <div class="record-text">
+      <p>Program committees for PETS and ICLR workshops. Reviewer for NeurIPS, IEEE S&amp;P, USENIX Security, ACM CCS and EuroCrypt.</p>
+      <p>Invited talks at EPFL, Google DeepMind, Facebook FAIR, the University of Virginia and JP Morgan AI Research.</p>
+    </div>
+  </section>
 </div>
-
-<p class="editor-link"><a href="cloudcannon:collections/_staff_members" class="btn"><strong>&#9998;</strong> Update Staff Members</a></p>
-
-<ul class="staff-list">
-	{% for member in site.staff_members %}
-		<li class="staff">
-			<div class="staff-details">
-				<div class="staff-image">
-					<img src="{{ member.image }}" alt="Staff photo for {{ member.name }}" width="120" height="120">
-				</div>
-				<ul class="staff-info">
-					<li>{{ member.name }}</li>
-					<li><small>{{ member.credentials }}</small></li>
-					<li><a href="mailto:{{ site.data.company.contact_email_address }}">{{ site.data.company.contact_email_address }}</a></li>
-					<!-- <li><a href="tel:{{ site.data.company.phone }}">{{ site.data.company.phone }}</a>  ext {{ member.phone_extension }}</li> -->
-				</ul>
-			</div>
-
-			<div class="staff-bio">
-				<p>{{ member.content | markdownify }}</p>
-			</div>
-		</li>
-	{% endfor %}
-</ul>

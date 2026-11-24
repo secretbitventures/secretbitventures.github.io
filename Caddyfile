@@ -1,0 +1,38 @@
+{
+	# Railway terminates TLS. Nothing here makes outbound requests, so the service can sleep.
+	auto_https off
+	admin off
+	persist_config off
+}
+
+:{$PORT:8080} {
+	root * /srv
+	encode zstd gzip
+
+	@www host www.secretbitventures.com
+	redir @www https://secretbitventures.com{uri} permanent
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+	@fonts path /assets/fonts/*
+	header @fonts Cache-Control "public, max-age=31536000, immutable"
+	@media {
+		path /assets/* /images/* *.png
+		not path /assets/fonts/*
+	}
+	header @media Cache-Control "public, max-age=86400"
+	@pages not path /assets/* /images/* *.png
+	header @pages Cache-Control "public, max-age=300"
+
+	file_server
+
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}

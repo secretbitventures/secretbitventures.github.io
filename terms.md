@@ -1,12 +1,6 @@
 ---
 title: Terms of Service
-call_to_action: Contact
-background_image_path:
-large_header: false
-show_in_navigation: false
 ---
-
-# Terms of Service for SecretBit Ventures
 
 ## 1. Introduction
 

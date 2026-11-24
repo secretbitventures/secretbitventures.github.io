@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-
-{% if page.title %}
-	<div class="page-header">
-		<h2>{{ page.title }}</h2>
-	</div>
-{% endif %}
-
-<article class="content">
-	{{ content }}
-</article>
+<section class="hero hero-short">
+  <div class="wrap hero-in">
+    <h1 class="hero-title">{{ page.title }}</h1>
+  </div>
+</section>
+<div class="wrap page">
+  <div class="prose">
+    {{ content }}
+  </div>
+</div>

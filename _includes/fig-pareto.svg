@@ -1,0 +1,8 @@
+<svg class="fig" viewBox="0 0 400 200" role="img" aria-label="Illustrative chart of quality against cost. The Pareto frontier runs along the top left; an arrow shows a move from an expensive configuration to one on the frontier.">
+<g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M48 30V176H380"/></g>
+<g fill="none" stroke="currentColor" stroke-width="1.5" opacity=".45"><circle cx="102.5" cy="139.5" r="4"/><circle cx="118.0" cy="112.9" r="4"/><circle cx="149.0" cy="126.2" r="4"/><circle cx="167.6" cy="97.7" r="4"/><circle cx="192.4" cy="111.0" r="4"/><circle cx="223.4" cy="82.5" r="4"/><circle cx="242.0" cy="126.2" r="4"/><circle cx="260.6" cy="97.7" r="4"/><circle cx="285.4" cy="74.9" r="4"/><circle cx="136.6" cy="158.5" r="4"/><circle cx="204.8" cy="147.1" r="4"/><circle cx="300.9" cy="112.9" r="4"/><circle cx="350.5" cy="67.3" r="4"/></g>
+<path fill="none" stroke="currentColor" stroke-width="1.5" d="M65.3 154.7H71.5V120.5H80.8V86.3H124.2V73.0H204.8V59.7H310.2V50.2H372"/>
+<g fill="currentColor"><circle cx="65.3" cy="154.7" r="4"/><circle cx="71.5" cy="120.5" r="4"/><circle cx="80.8" cy="86.3" r="4"/><circle cx="124.2" cy="73.0" r="4"/><circle cx="204.8" cy="59.7" r="4"/><circle cx="310.2" cy="50.2" r="4"/></g>
+<g class="fig-hot"><path fill="none" stroke="currentColor" stroke-width="2" d="M325.0 90.1C265.0 124.1 160.8 124.3 92.8 94.3"/><path fill="none" stroke="currentColor" stroke-width="2" d="M101.8 92.3l-10 1.5 5 9"/><circle cx="335.0" cy="90.1" r="6" fill="currentColor"/><circle cx="80.8" cy="86.3" r="7" fill="currentColor"/></g>
+<g font-size="14" fill="currentColor"><text x="380" y="193" text-anchor="end">Cost</text><text x="48" y="20">Quality</text><text x="372" y="38" text-anchor="end">Pareto frontier</text></g>
+</svg>

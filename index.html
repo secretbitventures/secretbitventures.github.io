@@ -1,141 +1,149 @@
 ---
-title:
-call_to_action: Contact
-background_image_path:
-large_header: true
+layout: default
+title: Agentic AI, privacy and cryptography
 ---
+<section class="hero">
+  <div class="wrap hero-in">
+    <p class="eyebrow">AI agents, privacy and cryptography</p>
+    <h1 class="hero-title">Bring us the problem no one has solved yet.</h1>
+    <p class="hero-lede">SecretBit Ventures turns deep expertise in AI agents, privacy and cryptography into systems that work.</p>
+    <p class="hero-actions">
+      <a class="pill pill-light" href="#contact">Start a conversation</a>
+      <a class="pill pill-line" href="#work">See our work</a>
+    </p>
+    {% include logos.html %}
+  </div>
+</section>
 
-<div class="editable">
-	<p><strong>SecretBit Ventures</strong> builds trustworthy AI systems grounded in mathematics, cryptography, and privacy. Founded by <a href="{{ site.baseurl }}/about/">Dr. Sameer Wagh</a>, we work at the intersection of agentic AI, secure computation, and privacy-enhancing technologies &mdash; turning cutting-edge research into production systems.</p>
+<section class="section wrap" id="expertise">
+  <h2 class="h2">Our expertise</h2>
+  <p class="sub">Three fields, held together by mathematics.</p>
+  {% include expertise.html %}
+</section>
 
-	<div class="credentials-bar">
-		<span class="credential">IMO Silver Medalist</span>
-		<span class="credential">Princeton PhD</span>
-		<span class="credential">3&times; Microsoft Research</span>
-		<span class="credential">2000+ Citations</span>
-	</div>
+<section class="sand" id="credentials">
+  <div class="wrap">
+    <h2 class="vh">Credentials</h2>
+    {% include stats.html %}
+    <p class="creds">Led by Dr. Sameer Wagh: Princeton PhD, UC Berkeley postdoc, and silver medalist at the International Mathematical Olympiad as India’s highest scorer.</p>
+    <p class="creds-more">Qualcomm Innovation Fellowship and Facebook Systems for ML award.<br><a class="link" href="{{ '/about/' | relative_url }}">More about Sameer</a></p>
+  </div>
+</section>
 
-	<h3>What We Do</h3>
-	<ul>
-		<li><strong>Private AI &amp; Secure Computation:</strong> Privacy-preserving machine learning, secure multi-party computation, homomorphic encryption, and federated learning &mdash; from protocol design to production deployment</li>
-		<li><strong>Agentic AI Infrastructure:</strong> Secure enclaves for AI evaluation, confidential cross-organization model testing, LLM deployment optimization, and AI-driven code analysis</li>
-		<li><strong>Mathematical Foundations:</strong> Rigorous cryptographic protocol design, novel proof techniques, and formal security guarantees rooted in deep mathematical expertise</li>
-	</ul>
-</div>
+<section class="section work" id="work">
+  <div class="wrap">
+  <h2 class="h2">AI that gets better, <span class="nb">costs less</span> and keeps secrets.</h2>
+  <p class="sub">Selected work</p>
+  </div>
 
-<div class="projects-section">
-	<h3>Selected Projects</h3>
-	<div class="projects-carousel">
-		<div class="projects-track">
-			<div class="project-card">
-				<h4>Secure Enclaves for AI Evaluation</h4>
-				<p class="project-partner">Anthropic &amp; UK AI Safety Institute</p>
-				<p>Designed and deployed the first pilot of secure enclaves for AI evaluation, enabling confidential cross-organization model testing and setting precedent for industry adoption.</p>
-			</div>
-			<div class="project-card">
-				<h4>Private Network Trace Analysis</h4>
-				<p class="project-partner">University of Virginia</p>
-				<p>Privacy-preserving analysis of sensitive network trace data, enabling secure collaboration on network security research without exposing raw traffic.</p>
-			</div>
-			<div class="project-card">
-				<h4>Efficient MPC via Wavelet Transforms</h4>
-				<p class="project-partner">Nillion Inc.</p>
-				<p>Novel wavelet transform-based protocols for efficient secure multi-party computation, pushing the boundaries of practical MPC performance.</p>
-			</div>
-			<div class="project-card">
-				<h4>Automated AI Code Analysis</h4>
-				<p class="project-partner">Devron Corporation</p>
-				<p>Built an AI system for automated code analysis at a fraction of the cost, cutting monthly LLM endpoint costs by over 90% through architectural and deployment optimizations.</p>
-			</div>
-		</div>
-	</div>
-	<div class="carousel-dots"></div>
-</div>
+  <div class="wrap">
+  <div class="rail" id="rail" role="region" aria-label="Selected work" tabindex="0">
+    <article class="card case">
+      <div class="case-fig">{% include fig-double-blind.svg %}</div>
+      <div class="case-text">
+        <h3 class="card-title">The world’s first <span class="nb">double-blind</span> AI evaluation</h3>
+        <p class="who">With Google DeepMind and partners</p>
+        <p>Evaluators never saw Gemini’s weights, and Google never saw the test prompts. Sameer co-authored the report with OpenMined.</p>
+        <p><a class="link" href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/">Read the announcement</a></p>
+      </div>
+    </article>
+    <article class="card case">
+      <div class="case-fig">{% include fig-loop.svg %}</div>
+      <div class="case-text">
+        <h3 class="card-title">A self-improving agentic system</h3>
+        <p class="who">Client in the legal AI space</p>
+        <p>We built an agentic system that learns from its own work, so each round makes the next one better.</p>
+      </div>
+    </article>
+    <article class="card case">
+      <div class="case-fig">{% include fig-pareto.svg %}</div>
+      <div class="case-text">
+        <h3 class="card-title">Reduced agentic AI costs over 90% while keeping performance</h3>
+        <p class="who"><a href="https://www.lease-analytics.com/">Lease Analytics</a></p>
+        <p>We mapped the Pareto frontier of cost and quality for the company’s agents, then moved them onto it.</p>
+      </div>
+    </article>
+    <article class="card case">
+      <div class="case-fig">{% include fig-enclave.svg %}</div>
+      <div class="case-text">
+        <h3 class="card-title">Secure enclaves for AI evaluation</h3>
+        <p class="who">Anthropic and UK AI Safety Institute</p>
+        <p>Helped design and run the first pilot of secure enclaves for AI evaluation across two organizations.</p>
+        <p><a class="link" href="https://openmined.org/blog/secure-enclaves-for-ai-evaluation/">Read the report</a></p>
+      </div>
+    </article>
+    <article class="card case">
+      <div class="case-fig">{% include fig-code.svg %}</div>
+      <div class="case-text">
+        <h3 class="card-title">Automated AI code analysis</h3>
+        <p class="who">Devron Corporation</p>
+        <p>Built an AI system for code analysis and cut its monthly LLM endpoint costs by over 90%.</p>
+      </div>
+    </article>
+    <article class="card case">
+      <div class="case-fig">{% include fig-wavelet.svg %}</div>
+      <div class="case-text">
+        <h3 class="card-title">Efficient MPC with wavelet transforms</h3>
+        <p class="who">Nillion</p>
+        <p>New wavelet-based protocols that make secure multi-party computation faster and more practical.</p>
+        <p><a class="link" href="https://eprint.iacr.org/2025/013">Read the paper</a></p>
+      </div>
+    </article>
+    <article class="card case">
+      <div class="case-fig">{% include fig-trace.svg %}</div>
+      <div class="case-text">
+        <h3 class="card-title">Private network trace analysis</h3>
+        <p class="who">University of Virginia</p>
+        <p>Privacy-preserving analysis of network traces, so researchers can collaborate on security without exposing raw traffic.</p>
+      </div>
+    </article>
+  </div>
 
-<script>
-(function() {
-	var track = document.querySelector('.projects-track');
-	var dotsContainer = document.querySelector('.carousel-dots');
-	if (!track || !dotsContainer) return;
+  </div>
 
-	var cards = track.querySelectorAll('.project-card');
-	var totalCards = cards.length;
-	if (totalCards === 0) return;
+  <div class="rail-nav" id="rail-nav" hidden>
+    <button type="button" data-go="-1" aria-label="Previous project"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.500 6l-6 6 6 6"/></svg></button>
+    <button type="button" data-toggle aria-label="Pause automatic scrolling"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M9.500 7v10M14.500 7v10"/><path class="i-play" d="M9.500 6.500v11l8-5.500z"/></svg></button>
+    <button type="button" data-go="1" aria-label="Next project"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.500 6l6 6-6 6"/></svg></button>
+  </div>
+</section>
 
-	// Clone all cards for seamless looping
-	for (var i = 0; i < totalCards; i++) {
-		track.appendChild(cards[i].cloneNode(true));
-	}
+<section class="sand sheets" aria-label="Visual cryptography demonstration">
+  <div class="wrap">
+    <h2 class="h2">Privacy you can prove.</h2>
+    <p class="sub">These are two sheets of random noise. Either one alone reveals nothing. Drag to pull them apart.</p>
+    <canvas class="sheets-canvas" id="sheets" aria-hidden="true"></canvas>
+    <label class="sheets-control"><span class="vh">Position of the second sheet</span>
+      <input id="sheets-range" type="range" min="0" max="100" value="0" step="1">
+    </label>
+  </div>
+</section>
 
-	// Build dots
-	for (var i = 0; i < totalCards; i++) {
-		var dot = document.createElement('button');
-		dot.className = 'dot' + (i === 0 ? ' active' : '');
-		dot.setAttribute('aria-label', 'Go to project ' + (i + 1));
-		dot.dataset.index = i;
-		dotsContainer.appendChild(dot);
-	}
+<section class="section wrap" id="services">
+  <h2 class="h2">What you can hire us to do</h2>
+  <div class="services">
+    <div class="card service">
+      <svg class="disc" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M15 24a9 9 0 0 1 15.4-6.3L33 20M33 15v5h-5M33 24a9 9 0 0 1-15.4 6.3L15 28M15 33v-5h5"/></svg>
+      <h3 class="card-title">Build an agentic system</h3>
+      <p>Agents designed around your process, measured against your standards and built to keep improving.</p>
+    </div>
+    <div class="card service">
+      <svg class="disc" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M15 15v18h18M19 20c2 6 6 9 13 9.500M28 26.500l4 3-3.500 3.500"/></svg>
+      <h3 class="card-title">Cut the cost of one you have</h3>
+      <p>We test models, prompts and architectures on your real tasks, then move you to the best trade-off between cost and quality, including under HIPAA and SOC 2.</p>
+    </div>
+    <div class="card service">
+      <svg class="disc" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M16 22.500h16v10H16zM19.500 22.500V19a4.500 4.500 0 0 1 9 0v3.500M24 26.500v2.500"/></svg>
+      <h3 class="card-title">Make AI work on private data</h3>
+      <p>Enclaves, encryption and federated learning that let organizations work together without handing over their data, models or benchmarks.</p>
+    </div>
+    <div class="card service">
+      <svg class="disc" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M33 33l-4.800-4.800M30 22.500a7.500 7.500 0 1 1-15 0 7.500 7.500 0 0 1 15 0z"/></svg>
+      <h3 class="card-title">Answer a hard technical question</h3>
+      <p>Protocol design, architecture review and executive briefings for decisions that need a rigorous answer.</p>
+    </div>
+  </div>
+</section>
 
-	var dots = dotsContainer.querySelectorAll('.dot');
-	var index = 0;
-	var interval = 3500;
-	var paused = false;
-	var gap = 14;
-
-	function getCardWidth() {
-		return track.querySelector('.project-card').offsetWidth;
-	}
-
-	function updateDots() {
-		var active = index % totalCards;
-		for (var i = 0; i < dots.length; i++) {
-			dots[i].className = 'dot' + (i === active ? ' active' : '');
-		}
-	}
-
-	function slideTo(newIndex, animate) {
-		index = newIndex;
-		var offset = index * (getCardWidth() + gap);
-		track.style.transition = animate !== false ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none';
-		track.style.transform = 'translateX(-' + offset + 'px)';
-		updateDots();
-	}
-
-	function advance() {
-		index++;
-		slideTo(index);
-
-		// After reaching cloned set, snap back invisibly
-		if (index >= totalCards) {
-			setTimeout(function() {
-				slideTo(0, false);
-			}, 520);
-		}
-	}
-
-	var timer = setInterval(function() {
-		if (!paused) advance();
-	}, interval);
-
-	// Dot clicks
-	dotsContainer.addEventListener('click', function(e) {
-		if (e.target.classList.contains('dot')) {
-			clearInterval(timer);
-			slideTo(parseInt(e.target.dataset.index));
-			timer = setInterval(function() {
-				if (!paused) advance();
-			}, interval);
-		}
-	});
-
-	// Pause on hover
-	var carousel = document.querySelector('.projects-carousel');
-	carousel.addEventListener('mouseenter', function() { paused = true; });
-	carousel.addEventListener('mouseleave', function() { paused = false; });
-
-	// Recalculate on resize
-	window.addEventListener('resize', function() {
-		slideTo(index % totalCards, false);
-	});
-})();
-</script>
+<script src="{{ '/assets/js/rail.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+<script src="{{ '/assets/js/sheets.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

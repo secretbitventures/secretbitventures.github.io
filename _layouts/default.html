@@ -1,118 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1b2a">
+  <script>document.documentElement.className = 'js'</script>
+  {% seo %}
+  <link rel="preload" href="{{ '/assets/fonts/playfair-display-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/inter-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <link rel="icon" type="image/png" href="{{ '/images/favicon.png' | relative_url }}" sizes="48x48">
+  <link rel="icon" type="image/png" href="{{ '/touch-icon.png' | relative_url }}" sizes="192x192">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+  {% if jekyll.environment == 'production' %}
+  <script src="https://analytics.secretbitventures.com/api/script.js" data-site-id="61c2aa21f27f" defer></script>
+  {% endif %}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <header class="top" id="top">
+    <div class="top-in wrap">
+      <a class="top-logo" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/logo-sbv.webp' | relative_url }}" width="1373" height="291" alt="SecretBit Ventures, home">
+      </a>
+      <nav aria-label="Main">
+        <ul class="top-nav">
+          <li class="top-wide"><a href="{{ '/#expertise' | relative_url }}">Expertise</a></li>
+          <li class="top-mid"><a href="{{ '/#work' | relative_url }}">Work</a></li>
+          <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
+          <li><a class="pill pill-nav" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-		{% seo %}
-		{% feed_meta %}
+  <main id="main">
+    {{ content }}
+  </main>
 
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Quattrocento|Vollkorn:400,400i,700,700i">
-		<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="h2">Tell us what you’re trying to build.</h2>
+      <p class="sub">A few sentences is enough. Anything you share stays confidential.</p>
+      <p class="contact-act"><a class="pill pill-light" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+  </section>
 
-		<script
-		    src="https://analytics.secretbitventures.com/api/script.js"
-		    data-site-id="61c2aa21f27f"
-		    defer
-		></script>
-		
-		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
-			<script>
-				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-				ga('create', '{{ site.google_analytics_key }}', 'auto');
-				ga('send', 'pageview');
-			</script>
-			<script async src='https://www.google-analytics.com/analytics.js'></script>
-		{% endif %}
-	</head>
+  <footer class="foot wrap">
+    <img class="foot-logo" src="{{ '/assets/img/logo-sbv.webp' | relative_url }}" width="1373" height="291" alt="SecretBit Ventures" loading="lazy">
+    <ul class="foot-links">
+      <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+      <li><a href="{{ site.linkedin }}">LinkedIn</a></li>
+      <li><a href="https://github.com/snwagh">GitHub</a></li>
+      <li><a href="https://scholar.google.com/citations?user=HA3kHUEAAAAJ">Google Scholar</a></li>
+      <li><a href="https://www.snwagh.com">snwagh.com</a></li>
+      <li><a href="{{ '/terms/' | relative_url }}">Terms</a></li>
+    </ul>
+    <p class="foot-legal">© {{ site.time | date: '%Y' }} SecretBit Ventures, {{ site.location }}</p>
+  </footer>
 
-	<body>
-		<header style="background-image: url('{% include relative-src.html src=page.background_image_path %}');" {% if page.large_header %}class="main-hero"{% endif %}>
-			<div class="container">
-				<h1><a href="{{ site.baseurl }}/">{{ site.data.company.title }}</a></h1>
-				<nav>
-					<ul>
-						{% assign nav_pages = site.html_pages | where: 'show_in_navigation', true | sort: 'navigation_order' %}
-						{% for nav_page in nav_pages %}
-							{% if previous_page.path != nav_page.path %}
-								{% assign previous_page = nav_page %}
-								<li><a {% if nav_page.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ nav_page.url }}">{{ nav_page.title }}</a></li>
-							{% endif %}
-						{% endfor %}
-					</ul>
-				</nav>
-			</div>
-		</header>
-
-		<section class="main">
-			<div class="container">
-				{{ content }}
-			</div>
-		</section>
-
-		{% if page.call_to_action == 'Map' and site.google_maps_javascript_api_key %}
-			<section class="map-section">
-				<div id="map"></div>
-			</section>
-		{% elsif page.call_to_action == 'Contact' %}
-			<section class="quote-section">
-				<p class="container editable">
-					<a href="{{ site.baseurl }}/contact/">Get in touch</a> to discuss how we can help with your AI and privacy challenges.
-				</p>
-			</section>
-		{% else %}
-			<section class="quote-section">
-				<p class="container editable">
-					<a href="{{ site.baseurl }}/contact/">Get in touch</a> to discuss how we can help with your AI and privacy challenges.
-				</p>
-			</section>
-		{% endif %}
-
-		<footer>
-			<div class="container">
-				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Update Footer Sections</a></p>
-
-				<div class="footer-columns">
-					{% for column in site.data.footer %}
-						<ul class="footer-links">
-							<li>
-								<h2>{{ column.title }}</h2>
-							</li>
-							{% for link in column.links %}
-								<li>
-									<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
-										{% if link.social_icon %}
-											{% include social-icon.html icon=link.social_icon %}
-										{% endif %}
-
-										{{ link.name }}
-									</a>
-								</li>
-							{% endfor %}
-						</ul>
-					{% endfor %}
-
-					<ul class="footer-links">
-						<li>
-							<h2>{{ site.data.company.title }}</h2>
-						</li>
-						<li>{{ site.data.company.description }}</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="legal-line">
-				<p class="container">
-					&copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }} &bull;
-					<a href="{{ site.baseurl }}/terms/">Terms</a>
-					<!-- &bull;
-					Template by <a href="http://cloudcannon.com/">CloudCannon</a> -->
-				</p>
-			</div>
-		</footer>
-	</body>
+  <script>
+    (function () {
+      var top = document.getElementById('top');
+      function set() { top.classList.toggle('is-stuck', scrollY > 24); }
+      addEventListener('scroll', set, { passive: true }); set();
+    })();
+  </script>
+</body>
 </html>
